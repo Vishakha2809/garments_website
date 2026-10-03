@@ -1,0 +1,104 @@
+.hero {
+  background-color: var(--bg);
+  padding: 60px 20px 80px;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 42px;
+  line-height: 1.1;
+  color: var(--teal);
+  margin-bottom: 24px;
+}
+
+.hero-lead {
+  font-size: 20px;
+  color: var(--mute);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-visual {
+  width: 100%;
+  max-width: 450px;
+}
+
+.swatch-card {
+  position: relative;
+  background: var(--card);
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+
+.swatch-pattern {
+  width: 100%;
+  height: 300px;
+  border-radius: 4px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--teal),
+    var(--teal) 20px,
+    var(--gold) 20px,
+    var(--gold) 24px,
+    var(--teal2) 24px,
+    var(--teal2) 44px
+  );
+}
+
+.swatch-tag {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  background: var(--gold);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  max-width: 200px;
+  line-height: 1.4;
+  box-shadow: 0 4px 12px rgba(240, 165, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .hero-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .hero-title {
+    font-size: 56px;
+  }
+  
+  .hero-content {
+    flex: 1;
+    padding-right: 40px;
+  }
+  
+  .hero-visual {
+    flex: 1;
+  }
+  
+  .swatch-tag {
+    bottom: -24px;
+    right: -24px;
+  }
+}
